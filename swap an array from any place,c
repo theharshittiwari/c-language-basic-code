@@ -1,0 +1,25 @@
+#include <stdio.h>
+void reverse(int a[],int si,int ei){
+    int i,j;
+    for(i=si,j=ei;i<=j;i++,j--){
+        int temp=a[i] ;
+        a[i]=a[j];
+        a[j]=temp;
+    }
+    return ;
+}
+int main()
+{ int k,n,b,c;
+printf("enter the value of n,b,c");
+scanf("%d %d %d",&n,&b,&c);
+int a[n];
+for(k=0;k<n;k++){
+    printf("enter the element %d\n",k+1);
+    scanf("%d",&a[k]);
+     }
+reverse(a,b,c);
+for(k=0;k<n;k++){
+printf("%d",a[k]);
+    }
+ return 0;
+}
